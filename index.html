@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style.css" media="screen">
+    <title>Codificador de Texto</title>
+
+</head>
+<body>
+    <main class="main">
+        <section class="principal">
+            <div class="img-logo">
+        <img src="/assets/Logo.png" class="logo" alt="Logo Da Alura com a letra A" onclick="home()">
+        </div>
+        <div class="principal__texto">
+        <textarea class="input-texto" type="text" name="entrada-texto" id="texto-entrada" placeholder="Digite seu texto..."></textarea>
+        <div class="alerta">
+            <img src="/assets/exclamacao.png" class="img-alerta"
+            <label for="input-text">Apenas letras minúsculas e sem acento</label>
+        </div>
+        <div class="botoes">
+            <button class="btn-codificar" onclick="btnCodificar()">Codificar</button>
+            <button class="btn-decodificar" onclick="btnDecodificar()">Decodificar</button>
+        </div>
+        </section>
+        <section class="caixa-resultado">
+            <div id="div-desaparece" class="mensagem-box-div">
+                <img class="boneco" src="/assets/boneco.svg"> 
+                <h2>Nenhuma mensagem encontrada</h2>
+                <h3>Digite um texto que você deseja criptografar ou descriptografar.</h3>
+            </div>      
+            
+            </div>
+            <div id="div-aparece">
+                <textarea readonly id="box-resultado" class="mensagem" type="text" name="restultado-texto" maxlength="100" placeholder="Nenhuma mensagem encontrada"></textarea>
+            <button class="btn-copiar" value="copiar" id="copiarBtn" onclick="copiar()">Copiar</button>
+            </div>
+        </section>
+        
+    </main>
+    <footer>
+        <p>Desenvolvido por<a href="https://github.com/Gustavoaquino82" target="_blank"> Gustavo Aquino</a> (2024) </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

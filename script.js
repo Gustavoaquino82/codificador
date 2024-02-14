@@ -1,6 +1,10 @@
 var textInput = document.querySelector(".input-texto");
 var outInput = document.querySelector("#box-resultado");
 
+function clearInputText() {
+  document.querySelector('.input-texto').value = "";
+}
+
 document.getElementById("div-aparece").style.display= 'none';
 inputverificar();
 
@@ -70,24 +74,25 @@ function desencriptar (stringDecodificada) {
 function copiar() {
     const msg = document.querySelector(".mensagem");
     msg.select();
-    navigator.clipboard.writeText(msg.value)
-    msg.value="";
+    navigator.clipboard.writeText(msg.value)    
+    alert("Texto copiado para a área de transferência!");
 }
 function aparece() {
     document.getElementById("div-desaparece").style.display = 'none';
     document.getElementById("div-aparece").style.display = 'block';
-  }
+      }
   
   //manipula o dom para que alguns componentes apareçam e desapareçam da tela
   function home() {
     document.getElementById("div-aparece").style.display = 'none';
     document.getElementById("div-desaparece").style.display = 'block';
+    return clearInputText();
   }
-  function inputverificar() {
+    function inputverificar() {
     var inputPalavra = document.querySelector(".input-texto");
     inputPalavra.addEventListener("keypress", function (e) {
       var keyCode = (e.keyCode ? e.keyCode : e.which);
-  
+
       if (keyCode > 47 && keyCode < 65) {
         e.preventDefault();
     }

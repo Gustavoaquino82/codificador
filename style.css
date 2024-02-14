@@ -48,8 +48,11 @@ font-weight: 400;
 }
 .input-texto{
     text-transform: lowercase;
-    max-width: 100%;
-    margin: 88px 32px 100px 100px;
+    width: 50vw;
+    margin-left: 20%;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     resize: none;
     border: none;
@@ -134,8 +137,11 @@ font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
 }
-.div-desaparece h2 {
-    font-weight: 400;
+.mensagem-box-div h2 {
+    font-weight: 600;
+}
+.mensagem-box-div h3{
+  font-weight: 400;
 }
 .div-aparece{
     display: flex;

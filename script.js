@@ -17,7 +17,7 @@ inputverificar();
 // caputura o id no momento do click e direciona para o metódo que codifica o texto
 document.getElementsByClassName('btn-codificar').onclick = (e) =>{
     e.preventDefault();
-    const textoCodificado = criptografar(input_texto.value.toLowercase())
+    const textoCodificado = criptografar(input_texto.value.toLowercase());
     input_mensagem.value = textoCodificado;
     input_texto.value = "";
     aparece()
@@ -26,9 +26,10 @@ document.getElementsByClassName('btn-codificar').onclick = (e) =>{
 // caputura o id no momento do click e direciona para o metódo que desencripta o texto
 document.getElementsByClassName('btn-decodificar').onclick = (e) => {
     e.preventDefault();
-    const textoDecodificado = descriptografar(input_texto.value);
+    const textoDecodificado = descriptografar(input_texto.value.toLowercase());
     input_mensagem.value = textoDecodificado;
     input_texto.value = "";
+    aparece()
 }
 
 // caputura o id no momento do click e faz a validação de copiar o texto
@@ -48,6 +49,7 @@ const textoCodificado = criptografar(input_texto.value)
 }
 // função de criptografia
 function criptografar(stringCodificada){
+    stringCodificada =stringCodificada.toLowerCase();
     for (let i = 0; i < matrixCodigo.length; i++) {
         if (stringCodificada.includes(matrixCodigo [i][0])){
         stringCodificada = stringCodificada.replaceAll(matrixCodigo[i][0], matrixCodigo[i][1])
